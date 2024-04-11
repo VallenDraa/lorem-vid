@@ -1,0 +1,28 @@
+{
+  "name": "lorem-vid",
+  "module": "server.ts",
+  "type": "module",
+  "version": "1.0.0",
+  "scripts": {
+    "tailwind": "tailwindcss -i ./src/styles.css -o ./public/styles.css",
+    "tailwind:watch": "bun tailwind --watch",
+    "start": "bun src/server.ts",
+    "dev": "concurrently \"bun --watch src/server.ts\" \"bun tailwind:watch\""
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/express": "^4.17.21",
+    "concurrently": "^8.2.2",
+    "prettier": "^3.2.5",
+    "prettier-plugin-tailwindcss": "^0.5.13",
+    "tailwindcss": "^3.4.3"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.12",
+    "ejs": "^3.1.9",
+    "express": "^4.19.2"
+  }
+}

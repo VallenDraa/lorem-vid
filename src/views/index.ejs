@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="styles.css" />
+		<script src="script.js" type="module"></script>
+		<title>Lorem Vid</title>
+	</head>
+	<body class="font-medium bg-slate-950 overflow-x-hidden">
+		<div
+			class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
+			aria-hidden="true"
+		>
+			<div
+				class="relative right-0 bottom-0 aspect-[1155/678] w-[40rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-slate-600 to-blue-900 opacity-30 sm:left-[calc(50%-30rem)] sm:w-[85rem]"
+				style="
+					clip-path: polygon(
+						74.1% 44.1%,
+						100% 61.6%,
+						97.5% 26.9%,
+						85.5% 0.1%,
+						80.7% 2%,
+						72.5% 32.5%,
+						60.2% 62.4%,
+						52.4% 68.1%,
+						47.5% 58.3%,
+						45.2% 34.5%,
+						27.5% 76.7%,
+						0.1% 64.9%,
+						17.9% 100%,
+						27.6% 76.8%,
+						76.1% 97.7%,
+						74.1% 44.1%
+					);
+				"
+			></div>
+		</div>
+
+		<div
+			class="p-4 relative z-10 flex flex-col border-t-8 border-slate-700 min-h-screen"
+		>
+			<div
+				class="mx-auto w-full max-w-screen-lg grow flex flex-col md:flex-row gap-8 md:justify-between justify-center md:items-center"
+			>
+				<section>
+					<h1 class="text-4xl md:text-7xl font-extrabold mb-2 text-slate-400">
+						lorem vid.
+					</h1>
+					<p class="md:text-lg text-slate-500">
+						the missing video placeholder api you always wanted
+						<span class="inline md:hidden">👇🏼</span>
+						<span class="hidden md:inline">👉🏼</span>
+					</p>
+				</section>
+
+				<section class="space-y-4">
+					<form
+						id="search-video-form"
+						class="flex flex-col md:flex-row items-center gap-2"
+					>
+						<input
+							id="search-video-input"
+							type="text"
+							class="bg-slate-800/70 border border-slate-700 shadow-md shadow-slate-900 rounded-lg w-full md:w-auto py-2 px-5 text-slate-400 placeholder:text-slate-500 focus:outline-none focus:ring ring-blue-900 grow"
+							placeholder="Search Video..."
+						/>
+						<button
+							class="bg-slate-800/70 border border-slate-700 shadow-md shadow-slate-900 hover:bg-slate-700/70 active:bg-slate-800/70 transition rounded-lg w-full md:w-auto py-2 px-5 text-slate-400 placeholder:text-slate-500 focus:outline-none focus-visible:ring ring-blue-900"
+						>
+							Search
+						</button>
+					</form>
+
+					<video
+						id="video-player"
+						src="/videos"
+						autoplay
+						controls
+						loop
+						muted
+						class="min-w-full aspect-video md:w-[640px] bg-slate-950 border border-slate-700 rounded-lg shadow-2xl shadow-slate-900"
+					></video>
+				</section>
+			</div>
+
+			<p
+				class="w-max mx-auto py-1 px-4 bg-slate-800/70 border border-slate-700 backdrop-blur-md shadow-md shadow-slate-900 rounded-full text-center text-sm mt-4 text-slate-500"
+			>
+				it's <%= new Date().getFullYear() %> now, made with ☕ by
+				<a
+					href="https://vallendra.my.id"
+					class="text-slate-400 hover:underline underline-offset-2 transition hover:rotate-3 transform"
+					>VallenDraa</a
+				>
+			</p>
+		</div>
+
+		<div aria-hidden="true" class="flex flex-col gap-2 fixed bottom-0 right-0">
+			<!-- loop the video list -->
+			<% for( let i = 0; i < 3; i++ ) { %>
+			<ul class="flex items-center gap-4 justify-end blur-md">
+				<!-- loop the video item -->
+				<% for( let j = 0; j < 3 + i; j++ ) { %>
+				<li class="w-48 aspect-video relative">
+					<video
+						src="/videos"
+						class="min-w-full opacity-60 bg-transparent rounded-lg"
+					></video>
+
+					<div class="absolute inset-0 bg-slate-950/40"></div>
+				</li>
+				<% } %>
+			</ul>
+			<% } %>
+		</div>
+	</body>
+</html>
