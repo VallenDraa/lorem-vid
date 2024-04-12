@@ -4,11 +4,16 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="styles.css" />
+		<meta
+			name="description"
+			content="the missing straight forward video placeholder api you always wanted."
+		/>
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 		<script
 			src="https://unpkg.com/alpinejs@3.13.8/dist/cdn.min.js"
 			defer
 		></script>
-		<title>Lorem Vid</title>
+		<title>lorem vid.</title>
 	</head>
 	<body class="font-medium bg-slate-950 overflow-x-hidden font-mono">
 		<div
@@ -51,7 +56,7 @@
 						lorem vid.
 					</h1>
 					<p class="md:text-lg text-slate-500">
-						the missing video placeholder api you always wanted
+						the missing straight forward video placeholder api you always wanted
 						<span class="inline md:hidden">👇🏼</span>
 						<span class="hidden md:inline">👉🏼</span>
 					</p>
@@ -77,10 +82,10 @@
 						/>
 						<button
 							x-on:click='
-								const newUrl = searchQuery ? `${siteDomain}/videos?search=${searchQuery}`: `${siteDomain}/videos`;
+								const newUrl = searchQuery ? `/videos?search=${searchQuery}`: `/videos`;
 
 								$refs.videoPlayer.src = newUrl;
-								codeSnippet = `<video src="${newUrl}"></video>`;								
+								codeSnippet = `<video src="${siteDomain}${newUrl}"></video>`;								
 							'
 							class="bg-slate-800/70 border border-slate-700 shadow-md shadow-slate-900 hover:bg-slate-700/70 active:bg-slate-800/70 transition rounded-lg py-2 px-5 text-slate-400"
 						>
