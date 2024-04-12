@@ -20,7 +20,7 @@ app.get('/', (_req, res) => {
   };
 
   return res.render('index', {
-    siteDomain: process.env.SITE_DOMAIN || 'http://localhost:3000',
+    siteDomain: process.env.SITE_DOMAIN!,
   } satisfies IndexViewData);
 });
 
