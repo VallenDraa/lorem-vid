@@ -37,7 +37,7 @@ app.get('/videos', async (req, res) => {
   }
 });
 
-app.get('*', (req, res) => res.redirect(EMPTY_RESULT_VIDEO));
+app.get('*', (_req, res) => res.redirect(EMPTY_RESULT_VIDEO));
 
 app.listen(3000, () => {
   console.log('Server is running on http://localhost:3000');

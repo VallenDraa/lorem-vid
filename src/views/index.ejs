@@ -141,11 +141,9 @@
 		</div>
 
 		<div aria-hidden="true" class="flex flex-col gap-2 fixed bottom-0 right-0">
-			<!-- loop the video list -->
-			<% for( let i = 0; i < 3; i++ ) { %>
+			<% for( let i = 0; i < 3; i++ ) { // Loop the video list %>
 			<ul class="flex items-center gap-4 justify-end blur-md">
-				<!-- loop the video item -->
-				<% for( let j = 0; j < 3 + i; j++ ) { %>
+				<% for( let j = 0; j < 3 + i; j++ ) { // Loop the video items %>
 				<li class="w-48 aspect-video relative">
 					<img
 						src="https://picsum.photos/seed/<%= Math.round(Math.random() * 400) %>/640/360"
