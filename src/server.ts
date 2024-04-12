@@ -15,7 +15,13 @@ app.set('views', path.join(__dirname, '/views'));
 app.use(express.static('public'));
 
 app.get('/', (_req, res) => {
-  return res.render('index');
+  type IndexViewData = {
+    siteDomain: string;
+  };
+
+  return res.render('index', {
+    siteDomain: process.env.SITE_DOMAIN || 'http://localhost:3000',
+  } satisfies IndexViewData);
 });
 
 app.get('/videos', async (req, res) => {

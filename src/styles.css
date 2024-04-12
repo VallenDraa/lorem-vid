@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  [x-cloak] {
+    display: none;
+  }
+
+  * {
+    @apply ring-blue-900 focus:outline-none focus:ring focus-visible:ring;
+  }
+}
