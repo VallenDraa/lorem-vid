@@ -1,21 +1,28 @@
 # lorem-vid
 
-To install dependencies:
+installing dependencies:
 
 ```bash
 bun install
 ```
 
-To run development server:
+running development server:
 
 ```bash
 bun dev
 ```
 
-To run for production:
+running in production:
 
 ```bash
 bun start
 ```
 
-This project was created using `bun init` in bun v1.1.3. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
+## tech stack
+
+- [bun](https://bun.sh)
+- [express.js](https://expressjs.com/)
+- [ejs](https://ejs.co/)
+- [alpine.js](https://alpinejs.dev/)
+- [tailwind.css](https://tailwindcss.com/)
+- [fly.io](https://fly.io/)
