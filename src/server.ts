@@ -20,7 +20,7 @@ app.get('/', (_req, res) => {
   };
 
   return res.render('index', {
-    siteDomain: process.env.SITE_DOMAIN!,
+    siteDomain: process.env.SITE_URL!,
   } satisfies IndexViewData);
 });
 
